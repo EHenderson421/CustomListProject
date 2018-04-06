@@ -6,19 +6,35 @@ using System.Threading.Tasks;
 
 namespace CustomListProject
 {
-    class CustomList
+    public class CustomList<T>
     {
         // Member Variables
-
+        T[] testList;
 
 
         //Constructor
+        public CustomList()
+        {
 
+        }
 
+        //Methods
+        public T this[int i]
+        {
+            get
+            {
+                return testList[i];
+            }
+            set
+            {
+                testList[i] = value;
+            }
+        }
 
-        //Member Methods
+        public void AddToList(T input)
+        {
 
-
+        }
 
 
     }
