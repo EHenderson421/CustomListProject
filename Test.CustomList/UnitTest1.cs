@@ -13,7 +13,7 @@ namespace Test.CustomList
 
             //Arrange
             CustomList<int> customListint = new CustomList<int>();
-            int input = 5;
+            int input = 1;
 
 
             //Act

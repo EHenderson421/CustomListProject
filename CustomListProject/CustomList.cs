@@ -10,12 +10,14 @@ namespace CustomListProject
     {
         // Member Variables
         T[] testList;
-
+        int count;
+        int capacity;
 
         //Constructor
         public CustomList()
         {
-
+            this.capacity = 1;
+            this.testList = new T[capacity];
         }
 
         //Methods
@@ -25,7 +27,7 @@ namespace CustomListProject
             {
                 return testList[i];
             }
-            set
+            set 
             {
                 testList[i] = value;
             }
@@ -33,7 +35,8 @@ namespace CustomListProject
 
         public void AddToList(T input)
         {
-
+            testList[count] = input;
+            count++;
         }
 
 
