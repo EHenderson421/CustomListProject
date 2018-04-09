@@ -75,7 +75,7 @@ namespace Test.CustomList
         {
             //Arrange
             CustomList<int> customListSize = new CustomList<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
-            int expected = 11;
+            int expected = 15;
 
             //Act
             int numberOfItems = customListSize.ListCount;

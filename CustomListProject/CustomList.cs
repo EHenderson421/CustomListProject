@@ -51,9 +51,9 @@ namespace CustomListProject
 
         public void Add(T input)
         {
-            ResizeArray();
+            CheckArraySize();
             testList[count] = input;
-
+            
             count++;
         }
 
@@ -70,6 +70,13 @@ namespace CustomListProject
         }
 
         
+        public void CheckArraySize()
+        {
+            if(capacity <= (count * 2))
+            {
+                ResizeArray();
+            }
+        }
 
 
         public IEnumerator<T> GetEnumerator()
