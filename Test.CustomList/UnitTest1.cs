@@ -86,8 +86,36 @@ namespace Test.CustomList
         }
 
 
+        [TestMethod]
+        public void Test_RemoveItemFromArray()
+        {
+            //Arrange
+            CustomList<int> customListRemove = new CustomList<int>() { 1, 2, 3, 4, 5 };
+            int input = 3;
+            int expected = 4;
+            //Act
+            customListRemove.Remove(input);
 
+            //Assert
+            Assert.AreEqual(expected, customListRemove[2]);
+        }
 
+        [TestMethod]
+        public void Test_SizeOfListAfterRemovingItem()
+        {
+            //Arrange
+            CustomList<int> customListRemove = new CustomList<int>() { 1, 2, 3, 4, 5 };
+            int input = 3;
+            int expected = 4;
+
+            //Act
+            customListRemove.Remove(input);
+            int numberOfItems = customListRemove.ListCount;
+
+            //Assert
+            Assert.AreEqual(expected, numberOfItems);
+
+        }
 
 
 
