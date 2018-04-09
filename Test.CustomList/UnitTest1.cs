@@ -13,15 +13,85 @@ namespace Test.CustomList
 
             //Arrange
             CustomList<int> customListint = new CustomList<int>();
-            int input = 1;
-
+            int input = 4;
+            int expected = 4;
 
             //Act
-            customListint.AddToList(input);
+            customListint.Add(input);
 
             //Assert
-            Assert.AreEqual(customListint[0], input);
+            Assert.AreEqual(expected, customListint[0]);
         }
+
+
+        [TestMethod]
+        public void Test_CountOfItemsInList_TotalOfFive()
+        {
+
+            //Arrange
+            CustomList<int> customListCount = new CustomList<int>() { 1, 2, 3, 4, 5 };
+            int expected = 5;
+
+            //Act
+            int numberOfItems = customListCount.ListCount;
+
+            //Assert
+            Assert.AreEqual(expected, numberOfItems);
+        }
+
+
+        [TestMethod]
+        public void Test_PositionInList_Three()
+        {
+            //Arrange
+            CustomList<int> customListPosition = new CustomList<int>() { 1, 2, 3, 4, 5 };
+            int expected = 3;
+            
+            //Act
+            int itemPosition = customListPosition[2];
+
+            //Assert
+            Assert.AreEqual(expected, itemPosition);
+        }
+
+
+        [TestMethod]
+        public void Test_ItemAddedToEndOfList_TEN()
+        {
+            //Arrange
+            CustomList<int> customListPosition = new CustomList<int>() { 1, 2, 3, 4 };
+            int inputPosition5 = 10;
+            int expected = 10;
+            //Act
+            customListPosition.Add(inputPosition5);
+            
+            //Assert
+            Assert.AreEqual(expected, customListPosition[4]);
+        }
+
+
+        [TestMethod]
+        public void Test_SizeOfListLargerThenCapacity()
+        {
+            //Arrange
+            CustomList<int> customListSize = new CustomList<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+            int expected = 11;
+
+            //Act
+            int numberOfItems = customListSize.ListCount;
+
+            //Assert
+            Assert.AreEqual(expected, numberOfItems);
+
+        }
+
+
+
+
+
+
+
+
 
     }
 }
