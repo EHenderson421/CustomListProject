@@ -137,12 +137,16 @@ namespace CustomListProject
 
         public IEnumerator<T> GetEnumerator()
         {
-            return ((IEnumerable<T>)testList).GetEnumerator();
+            for (int i = 0; i < count; i++)
+            {
+                yield return testList[i];
+            }
+            
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return ((IEnumerable<T>)testList).GetEnumerator();
+            return GetEnumerator();
         }
 
         
