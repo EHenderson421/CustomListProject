@@ -155,7 +155,38 @@ namespace Test.CustomList
         }
 
 
+        [TestMethod]
+        public void Test_AddOverloadInt()
+        {
+            //Arrange
+            CustomList<int> overloadList1 = new CustomList<int>() { 1, 2, 3 };
+            CustomList<int> overloadList2 = new CustomList<int>() { 4, 5, 6 };
+            CustomList<int> overloadList3 = new CustomList<int>();
+            CustomList<int> expectedList = new CustomList<int>() { 1, 2, 3, 4, 5, 6 };
 
+            //Act
+            overloadList3 = overloadList1 + overloadList2;
+
+            //Assert
+            Assert.AreEqual(expectedList[0], overloadList3[0]);       
+        }
+
+
+        [TestMethod]
+        public void Test_AddOverloadLastIndex()
+        {
+            //Arrange
+            CustomList<int> overloadList1 = new CustomList<int>() { 1, 2, 3 };
+            CustomList<int> overloadList2 = new CustomList<int>() { 4, 5, 6 };
+            CustomList<int> overloadList3 = new CustomList<int>();
+            CustomList<int> expectedList = new CustomList<int>() { 1, 2, 3, 4, 5, 6 };
+
+            //Act
+            overloadList3 = overloadList1 + overloadList2;
+
+            //Assert
+            Assert.AreEqual(expectedList[5], overloadList2[2]);
+        }
 
     }
 }
