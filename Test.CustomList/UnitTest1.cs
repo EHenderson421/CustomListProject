@@ -87,17 +87,34 @@ namespace Test.CustomList
 
 
         [TestMethod]
-        public void Test_RemoveItemFromArray()
+        public void Test_RemoveItemFromList()
         {
             //Arrange
             CustomList<int> customListRemove = new CustomList<int>() { 1, 2, 3, 4, 5 };
             int input = 3;
             int expected = 4;
+            
             //Act
-            customListRemove.Remove(input);
+            customListRemove.RemoveItemFromList(input);
 
             //Assert
             Assert.AreEqual(expected, customListRemove[2]);
+        }
+
+
+        [TestMethod]
+        public void Test_SizeOfList()
+        {
+            //Arrange
+            CustomList<int> customListRemove = new CustomList<int>() { 1, 2, 3, 4, 5 };
+            int expected = 5;
+            int numberOfItems;
+            
+            //Act
+            numberOfItems = customListRemove.ListCount;
+
+            //Assert
+            Assert.AreEqual(expected, numberOfItems);
         }
 
         [TestMethod]
@@ -107,10 +124,11 @@ namespace Test.CustomList
             CustomList<int> customListRemove = new CustomList<int>() { 1, 2, 3, 4, 5 };
             int input = 3;
             int expected = 4;
-
+            int numberOfItems;
+            
             //Act
-            customListRemove.Remove(input);
-            int numberOfItems = customListRemove.ListCount;
+            customListRemove.RemoveItemFromList(input);
+            numberOfItems = customListRemove.ListCount;
 
             //Assert
             Assert.AreEqual(expected, numberOfItems);

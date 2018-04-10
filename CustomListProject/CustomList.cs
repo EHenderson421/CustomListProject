@@ -53,7 +53,6 @@ namespace CustomListProject
         {
             CheckArraySize();
             testList[count] = input;
-            
             count++;
         }
 
@@ -78,6 +77,43 @@ namespace CustomListProject
             }
         }
 
+        public void RemoveItemFromList(T input)
+        {
+            for (int i =0; i <= count; i++)
+            {
+                if (testList[i].Equals(input))
+                {
+                    while (i < count)
+                    {
+                        testList[i] = testList[i + 1];
+                        i++;
+                    }
+                    count--;
+                    break;
+                }
+                
+            }
+        }
+
+        //not being used
+        public void Remove(T input)
+        {
+
+            RemoveItemFromList(input);
+            ItemToRemove();
+
+        }
+
+        //not being used
+        public void ItemToRemove()
+        {
+            T[] TempArray = new T[capacity];
+            for (int i = 0; i <= (count - 1); i++)
+            {
+                TempArray[i] = testList[i];
+            }
+            testList = TempArray;
+        }
 
         public IEnumerator<T> GetEnumerator()
         {
