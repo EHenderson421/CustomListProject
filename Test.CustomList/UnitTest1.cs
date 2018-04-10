@@ -8,7 +8,7 @@ namespace Test.CustomList
     public class UnitTest1
     {
         [TestMethod]
-        public void Test_AddIntToList_True()
+        public void Test_AddIntToList()
         {
 
             //Arrange
@@ -25,7 +25,7 @@ namespace Test.CustomList
 
 
         [TestMethod]
-        public void Test_CountOfItemsInList_TotalOfFive()
+        public void Test_CountOfItemsInList()
         {
 
             //Arrange
@@ -41,7 +41,7 @@ namespace Test.CustomList
 
 
         [TestMethod]
-        public void Test_PositionInList_Three()
+        public void Test_PositionInList()
         {
             //Arrange
             CustomList<int> customListPosition = new CustomList<int>() { 1, 2, 3, 4, 5 };
@@ -56,7 +56,7 @@ namespace Test.CustomList
 
 
         [TestMethod]
-        public void Test_ItemAddedToEndOfList_TEN()
+        public void Test_ItemAddedToEndOfList()
         {
             //Arrange
             CustomList<int> customListPosition = new CustomList<int>() { 1, 2, 3, 4 };
@@ -117,6 +117,7 @@ namespace Test.CustomList
             Assert.AreEqual(expected, numberOfItems);
         }
 
+
         [TestMethod]
         public void Test_SizeOfListAfterRemovingItem()
         {
@@ -135,6 +136,23 @@ namespace Test.CustomList
 
         }
 
+
+        [TestMethod]
+        public void Test_ListToString()
+        {
+            //Arrange
+            CustomList<double> listToString1 = new CustomList<double>() { 1, 2, 3, 4, 5, };
+            CustomList<CustomList<double>> listToString2 = new CustomList<CustomList<double>>();
+            string expected = "12345";
+            string testString;
+
+            //Act
+            testString = listToString1.ToString();
+
+            //Assert
+            Assert.AreEqual(expected, testString);
+
+        }
 
 
 

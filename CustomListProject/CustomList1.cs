@@ -77,6 +77,7 @@ namespace CustomListProject
             }
         }
 
+
         public void RemoveItemFromList(T input)
         {
             for (int i =0; i <= count; i++)
@@ -93,6 +94,17 @@ namespace CustomListProject
                 }
                 
             }
+        }
+
+
+        public override string ToString()
+        {
+            string newString = "";
+            for (int i = 0; i < count; i++)
+            {
+                newString += testList[i].ToString();
+            }
+            return newString;
         }
 
         //not being used
@@ -114,6 +126,14 @@ namespace CustomListProject
             }
             testList = TempArray;
         }
+
+
+
+
+
+
+
+
 
         public IEnumerator<T> GetEnumerator()
         {
