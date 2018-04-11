@@ -233,6 +233,17 @@ namespace Test.CustomList
         }
 
 
+        [TestMethod]
+        public void Test_SizeOfArrayAfterMinusOverload()
+        {
+            //Arrange
+
+            //Act
+
+            //Assert
+
+        }
+
 
 
 
