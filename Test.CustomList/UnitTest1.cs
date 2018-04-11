@@ -168,7 +168,7 @@ namespace Test.CustomList
             overloadList3 = overloadList1 + overloadList2;
 
             //Assert
-            Assert.AreNotEqual(expectedList[0], overloadList3[0]);       
+            Assert.AreEqual(expectedList[0], overloadList3[0]);       
         }
 
 
@@ -185,7 +185,7 @@ namespace Test.CustomList
             overloadList3 = overloadList1 + overloadList2;
 
             //Assert
-            Assert.AreNotEqual(expectedList[5], overloadList2[2]);
+            Assert.AreEqual(expectedList[5], overloadList2[2]);
         }
 
 
@@ -205,7 +205,7 @@ namespace Test.CustomList
             numberOfItems = overloadList3.ListCount;
 
             //Assert
-            Assert.AreNotEqual(expected, numberOfItems);
+            Assert.AreEqual(expected, numberOfItems);
 
 
         }
