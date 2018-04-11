@@ -128,6 +128,32 @@ namespace CustomListProject
         public static CustomList<T> operator - (CustomList<T> list1, CustomList<T> list2)
         {
             CustomList<T> testList = new CustomList<T>();
+            CustomList<T> tempArray = new CustomList<T>();
+            CustomList<T> tempList1 = new CustomList<T>();
+            CustomList<T> tempList2 = new CustomList<T>();
+
+            for (int i = 0; i < list1.ListCount; i++)
+            {
+                testList.Add(list1[i]);
+            }
+
+            for (int i = 0; i < list2.ListCount; i++)
+            {
+                testList.Add(list2[i]);
+            }
+
+            for (int i = 0; i < list1.ListCount; i++)
+            {
+                var valueCheck1 = list1[i];
+                for (int j = 0; j < list2.ListCount; j++)
+                {
+                    if (list1[i].Equals(list2[j]))
+                    {
+                        testList.RemoveItemFromList(list1[i]);
+                        break;
+                    }
+                }
+            }
 
 
         }

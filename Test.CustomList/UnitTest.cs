@@ -215,7 +215,7 @@ namespace Test.CustomList
             CustomList<int> overloadList1 = new CustomList<int>() { 1, 2, 3 };
             CustomList<int> overloadList2 = new CustomList<int>() { 4, 1, 6 };
             CustomList<int> overloadList3 = new CustomList<int>();
-            CustomList<int> expectedList = new CustomList<int>() { 1, 2, 3, 4, 6 };
+            CustomList<int> expectedList = new CustomList<int>() { 2, 3, 4, 1, 6 };
 
             //Act
             overloadList3 = overloadList1 - overloadList2;
@@ -238,7 +238,7 @@ namespace Test.CustomList
             overloadList3 = overloadList1 - overloadList2;
 
             //Assert
-            Assert.AreEqual(expectedList[5], overloadList3[5]);
+            Assert.AreEqual(expectedList[4], overloadList3[4]);
         }
 
 
