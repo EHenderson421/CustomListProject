@@ -185,7 +185,7 @@ namespace Test.CustomList
             overloadList3 = overloadList1 + overloadList2;
 
             //Assert
-            Assert.AreEqual(expectedList[5], overloadList2[2]);
+            Assert.AreEqual(expectedList[5], overloadList3[5]);
         }
 
 
@@ -196,7 +196,6 @@ namespace Test.CustomList
             CustomList<int> overloadList1 = new CustomList<int>() { 1, 2, 3 };
             CustomList<int> overloadList2 = new CustomList<int>() { 4, 5, 6 };
             CustomList<int> overloadList3 = new CustomList<int>();
-            CustomList<int> expectedList = new CustomList<int>() { 1, 2, 3, 4, 5, 6 };
             int expected = 6;
             int numberOfItems;
 
@@ -213,11 +212,16 @@ namespace Test.CustomList
         public void Test_MinusOverLoadInt()
         {
             //Arrange
+            CustomList<int> overloadList1 = new CustomList<int>() { 1, 2, 3 };
+            CustomList<int> overloadList2 = new CustomList<int>() { 4, 1, 6 };
+            CustomList<int> overloadList3 = new CustomList<int>();
+            CustomList<int> expectedList = new CustomList<int>() { 1, 2, 3, 4, 6 };
 
             //Act
+            overloadList3 = overloadList1 - overloadList2;
 
             //Assert
-
+            Assert.AreEqual(expectedList[0], overloadList3[0]);
         }
 
 
@@ -225,11 +229,16 @@ namespace Test.CustomList
         public void Test_MinusOverloadLastIndex()
         {
             //Arrange
+            CustomList<int> overloadList1 = new CustomList<int>() { 1, 2, 3 };
+            CustomList<int> overloadList2 = new CustomList<int>() { 4, 1, 6 };
+            CustomList<int> overloadList3 = new CustomList<int>();
+            CustomList<int> expectedList = new CustomList<int>() { 1, 2, 3, 4, 6 };
 
             //Act
+            overloadList3 = overloadList1 - overloadList2;
 
             //Assert
-
+            Assert.AreEqual(expectedList[0], overloadList3[0]);
         }
 
 
@@ -237,10 +246,18 @@ namespace Test.CustomList
         public void Test_SizeOfArrayAfterMinusOverload()
         {
             //Arrange
+            CustomList<int> overloadList1 = new CustomList<int>() { 1, 2, 3 };
+            CustomList<int> overloadList2 = new CustomList<int>() { 4, 1, 6 };
+            CustomList<int> overloadList3 = new CustomList<int>();
+            int expected = 5;
+            int numberOfItems;
 
             //Act
+            overloadList3 = overloadList1 - overloadList2;
+            numberOfItems = overloadList3.ListCount;
 
             //Assert
+            Assert.AreEqual(expected, numberOfItems);
 
         }
 
