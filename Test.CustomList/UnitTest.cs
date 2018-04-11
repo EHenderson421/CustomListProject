@@ -64,7 +64,7 @@ namespace Test.CustomList
             int expected = 10;
             //Act
             customListPosition.Add(inputPosition5);
-            
+
             //Assert
             Assert.AreEqual(expected, customListPosition[4]);
         }
@@ -93,7 +93,7 @@ namespace Test.CustomList
             CustomList<int> customListRemove = new CustomList<int>() { 1, 2, 3, 4, 5 };
             int input = 3;
             int expected = 4;
-            
+
             //Act
             customListRemove.RemoveItemFromList(input);
 
@@ -109,7 +109,7 @@ namespace Test.CustomList
             CustomList<int> customListRemove = new CustomList<int>() { 1, 2, 3, 4, 5 };
             int expected = 5;
             int numberOfItems;
-            
+
             //Act
             numberOfItems = customListRemove.ListCount;
 
@@ -126,7 +126,7 @@ namespace Test.CustomList
             int input = 3;
             int expected = 4;
             int numberOfItems;
-            
+
             //Act
             customListRemove.RemoveItemFromList(input);
             numberOfItems = customListRemove.ListCount;
@@ -168,7 +168,7 @@ namespace Test.CustomList
             overloadList3 = overloadList1 + overloadList2;
 
             //Assert
-            Assert.AreEqual(expectedList[0], overloadList3[0]);       
+            Assert.AreEqual(expectedList[0], overloadList3[0]);
         }
 
 
@@ -190,7 +190,7 @@ namespace Test.CustomList
 
 
         [TestMethod]
-        public void Test_SizeOfArrayAfterOverload()
+        public void Test_SizeOfArrayAfterAddOverload()
         {
             //Arrange
             CustomList<int> overloadList1 = new CustomList<int>() { 1, 2, 3 };
@@ -206,19 +206,37 @@ namespace Test.CustomList
 
             //Assert
             Assert.AreEqual(expected, numberOfItems);
+        }
 
+
+        [TestMethod]
+        public void Test_MinusOverLoadInt()
+        {
+            //Arrange
+
+            //Act
+
+            //Assert
 
         }
+
+
+        [TestMethod]
+        public void Test_MinusOverloadLastIndex()
+        {
+            //Arrange
+
+            //Act
+
+            //Assert
+
+        }
+
+
+
+
+
+
+
     }
 }
-////Arrange
-//CustomList<int> customListint = new CustomList<int>();
-//int input = 4;
-//int expected = 4;
-
-////Act
-//customListint.Add(input);
-
-//            //Assert
-//            Assert.AreEqual(expected, customListint[0]);
-//        }
