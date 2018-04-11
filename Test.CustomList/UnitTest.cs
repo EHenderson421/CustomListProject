@@ -238,7 +238,7 @@ namespace Test.CustomList
             overloadList3 = overloadList1 - overloadList2;
 
             //Assert
-            Assert.AreEqual(expectedList[0], overloadList3[0]);
+            Assert.AreEqual(expectedList[5], overloadList3[5]);
         }
 
 

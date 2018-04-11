@@ -125,7 +125,12 @@ namespace CustomListProject
         }
 
 
+        public static CustomList<T> operator - (CustomList<T> list1, CustomList<T> list2)
+        {
+            CustomList<T> testList = new CustomList<T>();
 
+
+        }
 
 
 
