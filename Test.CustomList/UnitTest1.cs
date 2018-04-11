@@ -31,9 +31,9 @@ namespace Test.CustomList
             //Arrange
             CustomList<int> customListCount = new CustomList<int>() { 1, 2, 3, 4, 5 };
             int expected = 5;
-
+            int numberOfItems;
             //Act
-            int numberOfItems = customListCount.ListCount;
+            numberOfItems = customListCount.ListCount;
 
             //Assert
             Assert.AreEqual(expected, numberOfItems);
@@ -46,9 +46,9 @@ namespace Test.CustomList
             //Arrange
             CustomList<int> customListPosition = new CustomList<int>() { 1, 2, 3, 4, 5 };
             int expected = 3;
-            
+            int itemPosition;
             //Act
-            int itemPosition = customListPosition[2];
+            itemPosition = customListPosition[2];
 
             //Assert
             Assert.AreEqual(expected, itemPosition);
@@ -168,7 +168,7 @@ namespace Test.CustomList
             overloadList3 = overloadList1 + overloadList2;
 
             //Assert
-            Assert.AreEqual(expectedList[0], overloadList3[0]);       
+            Assert.AreNotEqual(expectedList[0], overloadList3[0]);       
         }
 
 
@@ -185,8 +185,40 @@ namespace Test.CustomList
             overloadList3 = overloadList1 + overloadList2;
 
             //Assert
-            Assert.AreEqual(expectedList[5], overloadList2[2]);
+            Assert.AreNotEqual(expectedList[5], overloadList2[2]);
         }
 
+
+        [TestMethod]
+        public void Test_SizeOfArrayAfterOverload()
+        {
+            //Arrange
+            CustomList<int> overloadList1 = new CustomList<int>() { 1, 2, 3 };
+            CustomList<int> overloadList2 = new CustomList<int>() { 4, 5, 6 };
+            CustomList<int> overloadList3 = new CustomList<int>();
+            CustomList<int> expectedList = new CustomList<int>() { 1, 2, 3, 4, 5, 6 };
+            int expected = 6;
+            int numberOfItems;
+
+            //Act
+            overloadList3 = overloadList1 + overloadList2;
+            numberOfItems = overloadList3.ListCount;
+
+            //Assert
+            Assert.AreNotEqual(expected, numberOfItems);
+
+
+        }
     }
 }
+////Arrange
+//CustomList<int> customListint = new CustomList<int>();
+//int input = 4;
+//int expected = 4;
+
+////Act
+//customListint.Add(input);
+
+//            //Assert
+//            Assert.AreEqual(expected, customListint[0]);
+//        }

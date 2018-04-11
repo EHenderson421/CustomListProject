@@ -107,25 +107,48 @@ namespace CustomListProject
             return newString;
         }
 
-        //not being used
-        public void Remove(T input)
-        {
 
-            RemoveItemFromList(input);
-            ItemToRemove();
+        //public static CustomList<T> operator + (CustomList<T> list1, CustomList<T> list2)
+        //{
+        //    CustomList<T> testList = new CustomList<T>();
 
-        }
 
-        //not being used
-        public void ItemToRemove()
-        {
-            T[] TempArray = new T[capacity];
-            for (int i = 0; i <= (count - 1); i++)
-            {
-                TempArray[i] = testList[i];
-            }
-            testList = TempArray;
-        }
+        //    for (int i = 0; i < list1.ListCount; i++)
+        //    {
+        //        testList.Add(list1[i]);
+        //    }
+        //    for (int i = 0; i < list2.ListCount; i++)
+        //    {
+        //        testList.Add(list2[i]);
+        //    }
+        //    return testList;
+        //}
+
+
+
+
+
+
+
+        ////not being used
+        //public void Remove(T input)
+        //{
+
+        //    RemoveItemFromList(input);
+        //    ItemToRemove();
+
+        //}
+
+        ////not being used
+        //public void ItemToRemove()
+        //{
+        //    T[] TempArray = new T[capacity];
+        //    for (int i = 0; i <= (count - 1); i++)
+        //    {
+        //        TempArray[i] = testList[i];
+        //    }
+        //    testList = TempArray;
+        //}
 
 
 
