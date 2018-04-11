@@ -108,21 +108,21 @@ namespace CustomListProject
         }
 
 
-        //public static CustomList<T> operator + (CustomList<T> list1, CustomList<T> list2)
-        //{
-        //    CustomList<T> testList = new CustomList<T>();
+        public static CustomList<T> operator +(CustomList<T> list1, CustomList<T> list2)
+        {
+            CustomList<T> testList = new CustomList<T>();
 
 
-        //    for (int i = 0; i < list1.ListCount; i++)
-        //    {
-        //        testList.Add(list1[i]);
-        //    }
-        //    for (int i = 0; i < list2.ListCount; i++)
-        //    {
-        //        testList.Add(list2[i]);
-        //    }
-        //    return testList;
-        //}
+            for (int i = 0; i < list1.ListCount; i++)
+            {
+                testList.Add(list1[i]);
+            }
+            for (int i = 0; i < list2.ListCount; i++)
+            {
+                testList.Add(list2[i]);
+            }
+            return testList;
+        }
 
 
 
