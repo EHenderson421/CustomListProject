@@ -274,8 +274,8 @@ namespace Test.CustomList
             int numberOfItems;
 
             //Act
-            CustomList<int> result = listOddEven.ZipTwoLists(listOdd, listEven);
-            numberOfItems = listOddEven.ListCount;
+            CustomList<int> resultListOddEven = listOddEven.ZipTwoLists(listOdd, listEven);
+            numberOfItems = resultListOddEven.ListCount;
 
             //Assert
             Assert.AreEqual(expected, numberOfItems);
