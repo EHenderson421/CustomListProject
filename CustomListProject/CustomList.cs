@@ -124,7 +124,61 @@ namespace CustomListProject
             return testList;
         }
 
+        // New Code Start //
+        public static CustomList<T> operator - (CustomList<T> list1, CustomList<T> list2)
+        {
+            CustomList<T> testArray = new CustomList<T>();
+            CustomList<T> tempArray = new CustomList<T>();
+            CustomList<T> tempList1 = new CustomList<T>();
+            CustomList<T> tempList2 = new CustomList<T>();
 
+            for (int i = 0; i < list1.ListCount; i++)
+            {
+                testArray.Add(list1[i]);
+            }
+
+            for (int i = 0; i < list2.ListCount; i++)
+            {
+                testArray.Add(list2[i]);
+            }
+
+            for (int i = 0; i < list1.ListCount; i++)
+            {
+                var valueToCheck1 = list1[i];
+                for (int j = 0; j < list2.ListCount; j++)
+                {
+                    if (list1[i].Equals(list2[j]))
+                    {
+                        testArray.RemoveItemFromList(list1[i]);
+                        break;
+                    }
+                }
+            }
+                return testArray;
+        }
+
+        public CustomList<T> ZipTwoLists(CustomList<T> ListOdds, CustomList<T> ListEvens)
+        {
+            CustomList<T> testArray = new CustomList<T>();
+            int fullListCount = (ListOdds.ListCount + ListEvens.ListCount);
+            int listCount = (fullListCount / 2);
+            int index = 0;
+            for (int i = 0; i < listCount; i++)
+            {
+                if (ListOdds[index] != null)
+                {
+                    Add(ListOdds[index]);
+                }
+                if (ListEvens[index] != null)
+                {
+                    Add(ListEvens[index]);
+                }
+                index++;
+            }
+            return testArray;
+        }
+
+        // New Code End //
         public IEnumerator<T> GetEnumerator()
         {
             for (int i = 0; i < count; i++)

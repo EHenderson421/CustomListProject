@@ -224,7 +224,7 @@ namespace Test.CustomList
             Assert.AreEqual(expectedList[0], overloadList3[0]);
         }
 
-
+        // New Code Start
         [TestMethod]
         public void Test_MinusOverloadLastIndex()
         {
@@ -262,26 +262,26 @@ namespace Test.CustomList
         }
 
 
-        //[TestMethod]
-        //public void Test_SizeOfZipTwoListsOfInts()
-        //{
-        //    //Arrange
-        //    CustomList<int> listOdd = new CustomList<int>() { 1, 3, 5, 7, 9 };
-        //    CustomList<int> listEven = new CustomList<int>() { 2, 4, 6, 8, 10 };
-        //    CustomList<int> listOddEven = new CustomList<int>();
-        //    //CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        //    int expected = 10;
-        //    int numberOfItems;
+        [TestMethod]
+        public void Test_SizeOfZipTwoListsOfInts()
+        {
+            //Arrange
+            CustomList<int> listOdd = new CustomList<int>() { 1, 3, 5, 7, 9 };
+            CustomList<int> listEven = new CustomList<int>() { 2, 4, 6, 8, 10 };
+            CustomList<int> listOddEven = new CustomList<int>();
+            CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int expected = 10;
+            //int numberOfItems;
 
-        //    //Act
-        //    CustomList<int> resultListOddEven = listOddEven.ZipTwoLists(listOdd, listEven);
-        //    numberOfItems = resultListOddEven.ListCount;
+            //Act
+            CustomList<int> resultListOddEven = listOddEven.ZipTwoLists(listOdd, listEven);
+            //numberOfItems = resultListOddEven.ListCount;
 
-        //    //Assert
-        //    Assert.AreEqual(expected, numberOfItems);
-        //}
+            //Assert
+            Assert.AreEqual(expected.ListCount, listOddEven.ListCount);
+        }
 
-
+        //New Code End//
 
 
 

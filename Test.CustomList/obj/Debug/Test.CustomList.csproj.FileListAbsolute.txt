@@ -3,7 +3,9 @@ C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\bin\Deb
 C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\bin\Debug\CustomListProject.exe
 C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\bin\Debug\CustomListProject.pdb
-C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
-C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\obj\Debug\Test.CustomList.csprojResolveAssemblyReference.cache
 C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\obj\Debug\Test.CustomList.dll
 C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\obj\Debug\Test.CustomList.pdb
+C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\bin\Debug\CustomListProject.exe.config
+C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\obj\Debug\Test.CustomList.csprojAssemblyReference.cache
+C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\obj\Debug\Test.CustomList.csproj.CoreCompileInputs.cache
+C:\devCode\Visual Studio 2015\Projects\CustomListProject\Test.CustomList\obj\Debug\Test.CustomList.csproj.CopyComplete

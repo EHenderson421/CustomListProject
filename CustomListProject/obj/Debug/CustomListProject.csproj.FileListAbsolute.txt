@@ -1,6 +1,7 @@
 C:\devCode\Visual Studio 2015\Projects\CustomListProject\CustomListProject\bin\Debug\CustomListProject.exe.config
 C:\devCode\Visual Studio 2015\Projects\CustomListProject\CustomListProject\bin\Debug\CustomListProject.exe
 C:\devCode\Visual Studio 2015\Projects\CustomListProject\CustomListProject\bin\Debug\CustomListProject.pdb
-C:\devCode\Visual Studio 2015\Projects\CustomListProject\CustomListProject\obj\Debug\CustomListProject.csprojResolveAssemblyReference.cache
 C:\devCode\Visual Studio 2015\Projects\CustomListProject\CustomListProject\obj\Debug\CustomListProject.exe
 C:\devCode\Visual Studio 2015\Projects\CustomListProject\CustomListProject\obj\Debug\CustomListProject.pdb
+C:\devCode\Visual Studio 2015\Projects\CustomListProject\CustomListProject\obj\Debug\CustomListProject.csprojAssemblyReference.cache
+C:\devCode\Visual Studio 2015\Projects\CustomListProject\CustomListProject\obj\Debug\CustomListProject.csproj.CoreCompileInputs.cache
